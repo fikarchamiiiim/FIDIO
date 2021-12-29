@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<h1>Home</h1>
+
+<ul>
+    {% for video in videos %}
+    <li><a href="{% url 'watch_page' video.slug %}">{{ video.title }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

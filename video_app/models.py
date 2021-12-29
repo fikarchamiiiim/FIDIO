@@ -12,9 +12,9 @@ class Video(models.Model):
     owned_by = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=64)
     description = models.TextField()
-    thumbnail = models.ImageField(upload_to='media/video_thumbnails', blank=True)
+    thumbnail = models.ImageField(upload_to='video_thumbnails', blank=True)
     slug = models.SlugField(default=str(uuid.uuid4()))
-    video_location = models.FileField(upload_to='media/videos')
+    video_location = models.FileField(upload_to='videos')
     upload_date = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 

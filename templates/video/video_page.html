@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<ul>
+    <li>
+        <video width="320" height="240" controls>
+            <source src="{{ video.video_location.url }}" type="video/mp4">
+        </video>
+    </li>
+    <li>{{ video.title }}</li>
+    <li>{{ video.owned_by }}</li>
+    <li>{{ video.description }}</li>
+    <li>{{ video.thumbnail }}</li>
+    <li>{{ video.upload_date }}</li>
+</ul>
+{% endblock content %}
